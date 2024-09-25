@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  border: none;
   outline: none;
   scroll-behavior: smooth;
   font-family: "Nunito", sans-serif;
@@ -14,9 +13,9 @@
 
 :root {
   --bg-color: #191f36;
-  --snd-bf-color: #262B40;
+  --snd-bg-color: #262B40;
   --text-color: #fff;
-  --main-clolor: #59B2F4;
+  --main-color: #59B2F4;
 
 }
  html {
@@ -30,8 +29,8 @@
  }
 
  section{
-  min-height: 100vh;
-  padding: 100rem 9% 2rem;
+  min-height: auto;
+  padding: 10rem 9% 2rem;
  }
 
  .header {
@@ -58,7 +57,7 @@
  }
 
  .navbar a{
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color : var(--text-color);
   margin-left: 4rem;
   font-weight: 700;
@@ -110,9 +109,9 @@
       transform: translateY(0);
     }
     50%{
-      transform: translateY(-2.4rem);
+      transform: translateY(-1.5rem);
     }
-    100%{
+    100% {
       transform: translateY(0);
     }
  }
@@ -124,5 +123,98 @@
  .social-media a {
   display: inline-flex;
   justify-content: center;
-
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0px;
+  transition: .5s ease;
  }
+
+ .social-media a:hover {
+  background: var(--main-color);
+  color : var(--bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+ }
+
+ .btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size:1.6rem;
+  color:var(--bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5s ease;
+ }
+
+ .btn:hover{
+  box-shadow: none;
+ }
+
+ .about {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap : 2rem;
+  background: var(--snd-bg-color);
+ }
+
+ .about-img img{
+  width: 35vw;
+  box-shadow: 0 0 1rem var(--main-color);;
+ }
+
+ .heading {
+  text-align: center;
+  font-size: 4.5rem;
+ }
+
+
+ .about-content h2{
+  text-align: left;
+  line-height: 1.2;
+ }
+
+ .about-content h3{
+  font-size: 2.6rem;
+ }
+
+ .about-content p{
+  font-size: 1.6rem;
+  margin:2rem 0 3rem;
+ }
+
+.services h2 {
+  margin-bottom: 5rem;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;  
+  gap : 2rem;
+}
+
+.services-container .services-box {
+  flex: 1 1 30rem;
+  background: var(--snd-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  transition: .5 ease ;
+}
+
+.services-container .services-box:hover{
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
